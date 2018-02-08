@@ -1,2 +1,15 @@
 // Databricks notebook source
-import spark
+import org.apache.spark.sql.SQLContext
+import org.apache.spark.sql.types._
+import org.apache.avro.Schema
+import org.apache.spark.sql.SparkSession
+import com.databricks.spark.avro._
+import java.io._
+
+val avscPath = "/mnt/adls/sandbox/users/js014381/REMEDY.ARADMIN.T1908.avsc"
+
+//val fis = new FileInputStream("/mnt/adls/sandbox/users/js014381/REMEDY.ARADMIN.T1908.avsc")
+//val avroSchema = new Schema.Parser().parse(new File(avscPath) )
+//val avroSchema = new Schema.Parser().parse(avroSchemaraw)
+//val customSchema = SchemaConverters.toSqlType(avroSchema)
+display(dbutils.fs.ls("/mnt/adls/sandbox/users/js014381"))
